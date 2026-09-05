@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07120b">
+<title>VENOM SMP • Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grid"></div>
+<header>
+  <a class="logo" href="#"><span>V</span><div><b>VENOM SMP</b><small>OFFICIAL STORE</small></div></a>
+  <nav><a href="#ranks">Ranks</a><a href="#items">Items</a><a href="#faq">FAQ</a></nav>
+  <button class="cartOpen" id="cartOpen">🛒 Cart <i id="count">0</i></button>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <div class="live"><span></span> SERVER ONLINE • JAVA + BEDROCK</div>
+    <h1>ENTER THE<br><em>VENOM ZONE.</em></h1>
+    <p>Upgrade your Minecraft adventure with exclusive ranks, coins, keys and bundles. Fast delivery and a secure checkout built for the Venom community.</p>
+    <div class="actions">
+      <a class="btn" href="#ranks">SHOP NOW →</a>
+      <button class="ip" id="copyIp">venom.mc-game.xyz <b>⧉</b></button>
+    </div>
+    <div class="trust">✓ INSTANT DELIVERY &nbsp; ✓ SECURE PAYMENTS &nbsp; ✓ COMMUNITY SUPPORT</div>
+  </div>
+  <div class="heroVisual">
+    <div class="cube"></div><div class="cube c2"></div><div class="cube c3"></div>
+    <div class="sigil">V</div>
+    <div class="float f1">⚔️ <b>RANKS</b><small>Rise higher</small></div>
+    <div class="float f2">☣️ <b>CRATES</b><small>Unlock chaos</small></div>
+  </div>
+</section>
+
+<div class="ticker"><span>🔥 MOST POPULAR</span><span>💚 VENOM COMMUNITY</span><span>⚡ INSTANT DELIVERY</span><span>🛡️ SECURE CHECKOUT</span></div>
+
+<section id="ranks" class="section">
+  <div class="heading"><div><small>01 / RANKS</small><h2>CHOOSE YOUR <em>POWER.</em></h2></div><p>Permanent server ranks with commands and perks to make your sessions more fun.</p></div>
+  <div class="cards">
+    <article class="card best"><label>BEST VALUE</label><div class="icon purple">✦</div><h3>VIP RANK</h3><p>Premium starter status for active players.</p><ul><li>Colored chat</li><li>+2 homes</li><li>/fly in hub</li><li>3 VIP crate keys</li></ul><footer><strong>$9.99</strong><button class="add" data-id="vip">ADD TO CART</button></footer></article>
+    <article class="card"><div class="icon blue">◆</div><h3>MVP RANK</h3><p>Everything in VIP with stronger perks.</p><ul><li>All VIP perks</li><li>+5 homes</li><li>/nick</li><li>5 MVP crate keys</li></ul><footer><strong>$14.99</strong><button class="add" data-id="mvp">ADD TO CART</button></footer></article>
+    <article class="card"><div class="icon gold">♛</div><h3>LEGEND RANK</h3><p>The ultimate Venom SMP experience.</p><ul><li>All MVP perks</li><li>+10 homes</li><li>Custom join message</li><li>10 Legend keys</li></ul><footer><strong>$24.99</strong><button class="add" data-id="legend">ADD TO CART</button></footer></article>
+  </div>
+</section>
+
+<section id="items" class="section alt">
+  <div class="heading"><div><small>02 / ITEMS</small><h2>STACK YOUR <em>LOOT.</em></h2></div><p>Use coins and keys for your next in-game upgrade.</p></div>
+  <div class="smallCards">
+    <article><div class="bigIcon">🟢</div><div><b>50,000 VENOM COINS</b><small>Perfect for your first big boost.</small></div><strong>$7.99</strong><button class="add" data-id="coins">ADD</button></article>
+    <article><div class="bigIcon">☣️</div><div><b>TOXIC CRATE KEYS ×10</b><small>10 chances at rare rewards.</small></div><strong>$5.99</strong><button class="add" data-id="crate">ADD</button></article>
+    <article><div class="bigIcon">☠️</div><div><b>STARTER BUNDLE</b><small>VIP energy + coins + keys.</small></div><strong>$19.99</strong><button class="add" data-id="bundle">ADD</button></article>
+  </div>
+</section>
+
+<section class="banner"><div><small>THE VENOM PROMISE</small><h2>BUY ONCE.<br><em>PLAY FOREVER.</em></h2></div><p>Your purchases help support server hosting, features, events and new seasons.</p></section>
+
+<section id="faq" class="section faq">
+  <div class="heading"><div><small>03 / FAQ</small><h2>NEED <em>ANSWERS?</em></h2></div></div>
+  <details open><summary>How fast are purchases delivered?</summary><p>Purchases are designed for automatic delivery. If delivery is delayed, contact server support with your username and order details.</p></details>
+  <details><summary>What IP do I use?</summary><p>Connect with <b>venom.mc-game.xyz</b>.</p></details>
+  <details><summary>Does this store support real payments?</summary><p>Yes. Configure Stripe in the backend environment variables to activate real Stripe Checkout. Without Stripe, the site runs in demo mode.</p></details>
+</section>
+</main>
+
+<footer><b>VENOM SMP</b><span>venom.mc-game.xyz</span><small>© 2026 Venom SMP</small></footer>
+
+<div class="shade" id="shade"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawerTop"><div><small>YOUR ORDER</small><h2>SHOPPING CART</h2></div><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="promo"><input id="promo" placeholder="Promo code"><button id="apply">APPLY</button></div>
+  <div class="totals"><p><span>Subtotal</span><b id="sub">$0.00</b></p><p><span>Discount</span><b id="disc">$0.00</b></p><p class="total"><span>Total</span><b id="grand">$0.00</b></p></div>
+  <button class="checkout" id="checkout">CHECKOUT →</button>
+  <small class="secure">🔒 Secure checkout • Payment is handled by the checkout provider.</small>
+</aside>
+
+<div class="modal" id="modal">
+  <div class="modalBox">
+    <button class="x" id="closeModal">×</button>
+    <small>FINAL STEP</small><h2>PLAYER <em>DETAILS.</em></h2><p>These details are used to identify the player receiving the purchase.</p>
+    <label>Minecraft Username<input id="username" maxlength="32" placeholder="YourUsername"></label>
+    <label>Email <i>(optional)</i><input id="email" type="email" placeholder="you@example.com"></label>
+    <div class="modalTotal"><span>Total</span><b id="modalTotal">$0.00</b></div>
+    <button class="checkout" id="pay">CONTINUE TO PAYMENT →</button>
+    <div class="demo" id="demo">Demo mode is active until Stripe is configured.</div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
